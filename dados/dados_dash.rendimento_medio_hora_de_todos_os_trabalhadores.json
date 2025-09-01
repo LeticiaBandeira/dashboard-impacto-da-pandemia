@@ -1,0 +1,56 @@
+[
+  {
+    "_id": {
+      "$oid": "68abafb93c728c5990bd7dbb"
+    },
+    "Estado": "RN",
+    "Ano": 2018,
+    "Rendimento-hora médio real habitual do trabalho principal (R$/hora)": 14.1,
+    "Rendimento-hora médio real habitual de todos os trabalhos (R$/hora)": 14.1
+  },
+  {
+    "_id": {
+      "$oid": "68abafb93c728c5990bd7dbc"
+    },
+    "Estado": "RN",
+    "Ano": 2019,
+    "Rendimento-hora médio real habitual do trabalho principal (R$/hora)": 13.6,
+    "Rendimento-hora médio real habitual de todos os trabalhos (R$/hora)": 13.8
+  },
+  {
+    "_id": {
+      "$oid": "68abafb93c728c5990bd7dbd"
+    },
+    "Estado": "RN",
+    "Ano": 2020,
+    "Rendimento-hora médio real habitual do trabalho principal (R$/hora)": 14.5,
+    "Rendimento-hora médio real habitual de todos os trabalhos (R$/hora)": 14.6
+  },
+  {
+    "_id": {
+      "$oid": "68abafb93c728c5990bd7dbe"
+    },
+    "Estado": "RN",
+    "Ano": 2021,
+    "Rendimento-hora médio real habitual do trabalho principal (R$/hora)": 15.8,
+    "Rendimento-hora médio real habitual de todos os trabalhos (R$/hora)": 15.9
+  },
+  {
+    "_id": {
+      "$oid": "68abafb93c728c5990bd7dbf"
+    },
+    "Estado": "RN",
+    "Ano": 2022,
+    "Rendimento-hora médio real habitual do trabalho principal (R$/hora)": 15.4,
+    "Rendimento-hora médio real habitual de todos os trabalhos (R$/hora)": 15.3
+  },
+  {
+    "_id": {
+      "$oid": "68abafb93c728c5990bd7dc0"
+    },
+    "Estado": "RN",
+    "Ano": 2023,
+    "Rendimento-hora médio real habitual do trabalho principal (R$/hora)": 14.2,
+    "Rendimento-hora médio real habitual de todos os trabalhos (R$/hora)": 14.2
+  }
+]

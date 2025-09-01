@@ -1,0 +1,68 @@
+[
+  {
+    "_id": {
+      "$oid": "68abb6333c728c5990bd7df8"
+    },
+    "Estado": "RN",
+    "Ano": 2018,
+    "Até um mês": 23.5,
+    "Mais de um mês a menos de um ano": 38.3,
+    "De um ano a menos de dois anos": 13.8,
+    "Dois anos ou mais": 24.5
+  },
+  {
+    "_id": {
+      "$oid": "68abb6333c728c5990bd7df9"
+    },
+    "Estado": "RN",
+    "Ano": 2019,
+    "Até um mês": 25.3,
+    "Mais de um mês a menos de um ano": 34.2,
+    "De um ano a menos de dois anos": 16.0,
+    "Dois anos ou mais": 24.5
+  },
+  {
+    "_id": {
+      "$oid": "68abb6333c728c5990bd7dfa"
+    },
+    "Estado": "RN",
+    "Ano": 2020,
+    "Até um mês": 25.0,
+    "Mais de um mês a menos de um ano": 55.5,
+    "De um ano a menos de dois anos": 7.7,
+    "Dois anos ou mais": 11.7
+  },
+  {
+    "_id": {
+      "$oid": "68abb6333c728c5990bd7dfb"
+    },
+    "Estado": "RN",
+    "Ano": 2021,
+    "Até um mês": 27.3,
+    "Mais de um mês a menos de um ano": 46.1,
+    "De um ano a menos de dois anos": 12.0,
+    "Dois anos ou mais": 14.6
+  },
+  {
+    "_id": {
+      "$oid": "68abb6333c728c5990bd7dfc"
+    },
+    "Estado": "RN",
+    "Ano": 2022,
+    "Até um mês": 26.3,
+    "Mais de um mês a menos de um ano": 44.3,
+    "De um ano a menos de dois anos": 10.9,
+    "Dois anos ou mais": 18.5
+  },
+  {
+    "_id": {
+      "$oid": "68abb6333c728c5990bd7dfd"
+    },
+    "Estado": "RN",
+    "Ano": 2023,
+    "Até um mês": 30.1,
+    "Mais de um mês a menos de um ano": 30.4,
+    "De um ano a menos de dois anos": 8.9,
+    "Dois anos ou mais": 30.7
+  }
+]

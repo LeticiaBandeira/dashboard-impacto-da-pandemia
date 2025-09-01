@@ -1,0 +1,66 @@
+[{
+  "_id": {
+    "$oid": "68abb2223c728c5990bd7dc2"
+  },
+  "Estado": "RN",
+  "Ano": 2018,
+  "Só estuda": 235,
+  "Estuda e está trabalhando": 75,
+  "Só está trabalhando": 271,
+  "Não estuda e não está trabalhando": 267
+},
+{
+  "_id": {
+    "$oid": "68abb2223c728c5990bd7dc3"
+  },
+  "Estado": "RN",
+  "Ano": 2019,
+  "Só estuda": 236,
+  "Estuda e está trabalhando": 74,
+  "Só está trabalhando": 284,
+  "Não estuda e não está trabalhando": 235
+},
+{
+  "_id": {
+    "$oid": "68abb2223c728c5990bd7dc4"
+  },
+  "Estado": "RN",
+  "Ano": 2020,
+  "Só estuda": 258,
+  "Estuda e está trabalhando": 64,
+  "Só está trabalhando": 248,
+  "Não estuda e não está trabalhando": 258
+},
+{
+  "_id": {
+    "$oid": "68abb2223c728c5990bd7dc5"
+  },
+  "Estado": "RN",
+  "Ano": 2021,
+  "Só estuda": 270,
+  "Estuda e está trabalhando": 92,
+  "Só está trabalhando": 250,
+  "Não estuda e não está trabalhando": 248
+},
+{
+  "_id": {
+    "$oid": "68abb2223c728c5990bd7dc6"
+  },
+  "Estado": "RN",
+  "Ano": 2022,
+  "Só estuda": 267,
+  "Estuda e está trabalhando": 65,
+  "Só está trabalhando": 270,
+  "Não estuda e não está trabalhando": 245
+},
+{
+  "_id": {
+    "$oid": "68abb2223c728c5990bd7dc7"
+  },
+  "Estado": "RN",
+  "Ano": 2023,
+  "Só estuda": 235,
+  "Estuda e está trabalhando": 56,
+  "Só está trabalhando": 295,
+  "Não estuda e não está trabalhando": 225
+}]

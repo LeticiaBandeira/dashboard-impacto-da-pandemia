@@ -1,0 +1,218 @@
+[
+  {
+    "_id": {
+      "$oid": "68abb3b53c728c5990bd7dc9"
+    },
+    "Estado": "RN",
+    "Ano": 2018,
+    "Faixa etária": "15 a 17 anos de idade",
+    "Só estuda": 82.2,
+    "Estuda e está trabalhando": 5.6,
+    "Só está trabalhando": 2.0,
+    "Não estuda e não está trabalhando": 10.1
+  },
+  {
+    "_id": {
+      "$oid": "68abb3b53c728c5990bd7dca"
+    },
+    "Estado": "RN",
+    "Ano": 2019,
+    "Faixa etária": "15 a 17 anos de idade",
+    "Só estuda": 81.2,
+    "Estuda e está trabalhando": 7.7,
+    "Só está trabalhando": 2.2,
+    "Não estuda e não está trabalhando": 9.0
+  },
+  {
+    "_id": {
+      "$oid": "68abb3b53c728c5990bd7dcb"
+    },
+    "Estado": "RN",
+    "Ano": 2020,
+    "Faixa etária": "15 a 17 anos de idade",
+    "Só estuda": 88.8,
+    "Estuda e está trabalhando": 5.8,
+    "Só está trabalhando": 0.7,
+    "Não estuda e não está trabalhando": 4.7
+  },
+  {
+    "_id": {
+      "$oid": "68abb3b53c728c5990bd7dcc"
+    },
+    "Estado": "RN",
+    "Ano": 2021,
+    "Faixa etária": "15 a 17 anos de idade",
+    "Só estuda": 89.4,
+    "Estuda e está trabalhando": 5.3,
+    "Só está trabalhando": 0.6,
+    "Não estuda e não está trabalhando": 4.7
+  },
+  {
+    "_id": {
+      "$oid": "68abb3b53c728c5990bd7dcd"
+    },
+    "Estado": "RN",
+    "Ano": 2022,
+    "Faixa etária": "15 a 17 anos de idade",
+    "Só estuda": 87.4,
+    "Estuda e está trabalhando": 3.1,
+    "Só está trabalhando": 1.2,
+    "Não estuda e não está trabalhando": 8.3
+  },
+  {
+    "_id": {
+      "$oid": "68abb3b53c728c5990bd7dce"
+    },
+    "Estado": "RN",
+    "Ano": 2023,
+    "Faixa etária": "15 a 17 anos de idade",
+    "Só estuda": 87.1,
+    "Estuda e está trabalhando": 3.9,
+    "Só está trabalhando": 1.7,
+    "Não estuda e não está trabalhando": 7.2
+  },
+  {
+    "_id": {
+      "$oid": "68abb3b53c728c5990bd7dcf"
+    },
+    "Estado": "RN",
+    "Ano": 2018,
+    "Faixa etária": "18 a 24 anos de idade",
+    "Só estuda": 22.5,
+    "Estuda e está trabalhando": 10.9,
+    "Só está trabalhando": 26.9,
+    "Não estuda e não está trabalhando": 39.7
+  },
+  {
+    "_id": {
+      "$oid": "68abb3b53c728c5990bd7dd0"
+    },
+    "Estado": "RN",
+    "Ano": 2019,
+    "Faixa etária": "18 a 24 anos de idade",
+    "Só estuda": 26.4,
+    "Estuda e está trabalhando": 11.0,
+    "Só está trabalhando": 30.6,
+    "Não estuda e não está trabalhando": 32.0
+  },
+  {
+    "_id": {
+      "$oid": "68abb3b53c728c5990bd7dd1"
+    },
+    "Estado": "RN",
+    "Ano": 2020,
+    "Faixa etária": "18 a 24 anos de idade",
+    "Só estuda": 28.2,
+    "Estuda e está trabalhando": 7.9,
+    "Só está trabalhando": 26.0,
+    "Não estuda e não está trabalhando": 37.9
+  },
+  {
+    "_id": {
+      "$oid": "68abb3b53c728c5990bd7dd2"
+    },
+    "Estado": "RN",
+    "Ano": 2021,
+    "Faixa etária": "18 a 24 anos de idade",
+    "Só estuda": 29.8,
+    "Estuda e está trabalhando": 10.7,
+    "Só está trabalhando": 30.3,
+    "Não estuda e não está trabalhando": 29.2
+  },
+  {
+    "_id": {
+      "$oid": "68abb3b53c728c5990bd7dd3"
+    },
+    "Estado": "RN",
+    "Ano": 2022,
+    "Faixa etária": "18 a 24 anos de idade",
+    "Só estuda": 27.2,
+    "Estuda e está trabalhando": 10.3,
+    "Só está trabalhando": 27.6,
+    "Não estuda e não está trabalhando": 34.9
+  },
+  {
+    "_id": {
+      "$oid": "68abb3b53c728c5990bd7dd4"
+    },
+    "Estado": "RN",
+    "Ano": 2023,
+    "Faixa etária": "18 a 24 anos de idade",
+    "Só estuda": 21.9,
+    "Estuda e está trabalhando": 8.6,
+    "Só está trabalhando": 35.5,
+    "Não estuda e não está trabalhando": 34.0
+  },
+  {
+    "_id": {
+      "$oid": "68abb3b53c728c5990bd7dd5"
+    },
+    "Estado": "RN",
+    "Ano": 2018,
+    "Faixa etária": "25 a 29 anos de idade",
+    "Só estuda": 5.8,
+    "Estuda e está trabalhando": 7.6,
+    "Só está trabalhando": 56.0,
+    "Não estuda e não está trabalhando": 30.6
+  },
+  {
+    "_id": {
+      "$oid": "68abb3b53c728c5990bd7dd6"
+    },
+    "Estado": "RN",
+    "Ano": 2019,
+    "Faixa etária": "25 a 29 anos de idade",
+    "Só estuda": 5.0,
+    "Estuda e está trabalhando": 6.6,
+    "Só está trabalhando": 55.4,
+    "Não estuda e não está trabalhando": 32.9
+  },
+  {
+    "_id": {
+      "$oid": "68abb3b53c728c5990bd7dd7"
+    },
+    "Estado": "RN",
+    "Ano": 2020,
+    "Faixa etária": "25 a 29 anos de idade",
+    "Só estuda": 6.0,
+    "Estuda e está trabalhando": 8.5,
+    "Só está trabalhando": 50.2,
+    "Não estuda e não está trabalhando": 35.3
+  },
+  {
+    "_id": {
+      "$oid": "68abb3b53c728c5990bd7dd8"
+    },
+    "Estado": "RN",
+    "Ano": 2021,
+    "Faixa etária": "25 a 29 anos de idade",
+    "Só estuda": 4.5,
+    "Estuda e está trabalhando": 13.4,
+    "Só está trabalhando": 41.7,
+    "Não estuda e não está trabalhando": 40.5
+  },
+  {
+    "_id": {
+      "$oid": "68abb3b53c728c5990bd7dd9"
+    },
+    "Estado": "RN",
+    "Ano": 2022,
+    "Faixa etária": "25 a 29 anos de idade",
+    "Só estuda": 7.2,
+    "Estuda e está trabalhando": 6.6,
+    "Só está trabalhando": 54.1,
+    "Não estuda e não está trabalhando": 32.2
+  },
+  {
+    "_id": {
+      "$oid": "68abb3b53c728c5990bd7dda"
+    },
+    "Estado": "RN",
+    "Ano": 2023,
+    "Faixa etária": "25 a 29 anos de idade",
+    "Só estuda": 4.7,
+    "Estuda e está trabalhando": 6.6,
+    "Só está trabalhando": 56.9,
+    "Não estuda e não está trabalhando": 31.8
+  }
+]

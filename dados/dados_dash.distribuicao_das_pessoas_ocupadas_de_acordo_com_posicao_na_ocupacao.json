@@ -1,0 +1,86 @@
+[
+  {
+    "_id": {
+      "$oid": "68ababec3c728c5990bd7d8a"
+    },
+    "Estado": "RN",
+    "Ano": 2018,
+    "Empregado (CTPS)": 28.5,
+    "Empregado (informal)": 22.0,
+    "Trabalhador doméstico (CTPS)": 0.8,
+    "Trabalhador doméstico (informal)": 5.2,
+    "Militar ou funcionário público estatutário": 11.4,
+    "Conta própria": 24.6,
+    "Empregador": 5.0
+  },
+  {
+    "_id": {
+      "$oid": "68ababec3c728c5990bd7d8b"
+    },
+    "Estado": "RN",
+    "Ano": 2019,
+    "Empregado (CTPS)": 28.5,
+    "Empregado (informal)": 18.9,
+    "Trabalhador doméstico (CTPS)": 1.6,
+    "Trabalhador doméstico (informal)": 5.1,
+    "Militar ou funcionário público estatutário": 11.8,
+    "Conta própria": 28.1,
+    "Empregador": 4.0
+  },
+  {
+    "_id": {
+      "$oid": "68ababec3c728c5990bd7d8c"
+    },
+    "Estado": "RN",
+    "Ano": 2020,
+    "Empregado (CTPS)": 32.1,
+    "Empregado (informal)": 18.3,
+    "Trabalhador doméstico (CTPS)": 1.0,
+    "Trabalhador doméstico (informal)": 3.8,
+    "Militar ou funcionário público estatutário": 11.5,
+    "Conta própria": 27.5,
+    "Empregador": 4.5
+  },
+  {
+    "_id": {
+      "$oid": "68ababec3c728c5990bd7d8d"
+    },
+    "Estado": "RN",
+    "Ano": 2021,
+    "Empregado (CTPS)": 27.8,
+    "Empregado (informal)": 18.6,
+    "Trabalhador doméstico (CTPS)": 1.3,
+    "Trabalhador doméstico (informal)": 4.9,
+    "Militar ou funcionário público estatutário": 12.9,
+    "Conta própria": 25.9,
+    "Empregador": 6.5
+  },
+  {
+    "_id": {
+      "$oid": "68ababec3c728c5990bd7d8e"
+    },
+    "Estado": "RN",
+    "Ano": 2022,
+    "Empregado (CTPS)": 34.6,
+    "Empregado (informal)": 16.5,
+    "Trabalhador doméstico (CTPS)": 1.0,
+    "Trabalhador doméstico (informal)": 4.7,
+    "Militar ou funcionário público estatutário": 11.8,
+    "Conta própria": 25.4,
+    "Empregador": 4.8
+  },
+  {
+    "_id": {
+      "$oid": "68ababec3c728c5990bd7d8f"
+    },
+    "Estado": "RN",
+    "Ano": 2023,
+    "Empregado (CTPS)": 32.4,
+    "Empregado (informal)": 21.1,
+    "Trabalhador doméstico (CTPS)": 1.1,
+    "Trabalhador doméstico (informal)": 5.3,
+    "Militar ou funcionário público estatutário": 10.8,
+    "Conta própria": 25.1,
+    "Empregador": 2.7
+  }
+]

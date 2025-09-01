@@ -1,0 +1,68 @@
+[
+  {
+    "_id": {
+      "$oid": "68abae3e3c728c5990bd7da6"
+    },
+    "Estado": "RN",
+    "Ano": 2018,
+    "Sem instrução ou fundamental incompleto": 7.0,
+    "Ensino fundamental completo ou médio incompleto": 9.1,
+    "Ensino médio completo ou superior incompleto": 12.3,
+    "Ensino superior completo": 33.4
+  },
+  {
+    "_id": {
+      "$oid": "68abae3e3c728c5990bd7da7"
+    },
+    "Estado": "RN",
+    "Ano": 2019,
+    "Sem instrução ou fundamental incompleto": 7.0,
+    "Ensino fundamental completo ou médio incompleto": 8.6,
+    "Ensino médio completo ou superior incompleto": 11.7,
+    "Ensino superior completo": 31.4
+  },
+  {
+    "_id": {
+      "$oid": "68abae3e3c728c5990bd7da8"
+    },
+    "Estado": "RN",
+    "Ano": 2020,
+    "Sem instrução ou fundamental incompleto": 7.3,
+    "Ensino fundamental completo ou médio incompleto": 7.7,
+    "Ensino médio completo ou superior incompleto": 11.7,
+    "Ensino superior completo": 30.6
+  },
+  {
+    "_id": {
+      "$oid": "68abae3e3c728c5990bd7da9"
+    },
+    "Estado": "RN",
+    "Ano": 2021,
+    "Sem instrução ou fundamental incompleto": 6.6,
+    "Ensino fundamental completo ou médio incompleto": 9.4,
+    "Ensino médio completo ou superior incompleto": 11.0,
+    "Ensino superior completo": 38.1
+  },
+  {
+    "_id": {
+      "$oid": "68abae3e3c728c5990bd7daa"
+    },
+    "Estado": "RN",
+    "Ano": 2022,
+    "Sem instrução ou fundamental incompleto": 7.5,
+    "Ensino fundamental completo ou médio incompleto": 10.5,
+    "Ensino médio completo ou superior incompleto": 11.0,
+    "Ensino superior completo": 37.0
+  },
+  {
+    "_id": {
+      "$oid": "68abae3e3c728c5990bd7dab"
+    },
+    "Estado": "RN",
+    "Ano": 2023,
+    "Sem instrução ou fundamental incompleto": 7.6,
+    "Ensino fundamental completo ou médio incompleto": 8.0,
+    "Ensino médio completo ou superior incompleto": 10.7,
+    "Ensino superior completo": 32.2
+  }
+]

@@ -2,7 +2,6 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 
-dados = '[organizar] Análises a serem realizadas _ v1.xlsx'
 
 ICON = "img/grafico.png"
 st.logo(ICON)
@@ -36,90 +35,700 @@ if st.session_state.page == "Dados Gerais":
     st.subheader("Dados Gerais")
     col1, col2, col3 = st.columns(3)
     with col1:
-        df = pd.read_excel(dados, sheet_name="26 - População em idade de trab", header=1)    
-        df = df.apply(lambda col: pd.to_numeric(col, errors='coerce'))
-        df = df.astype(int)
-        col_x = df.columns[0] 
-        col_y = df.columns[1] 
-        fig1 = px.bar(df, x=col_x, y=col_y, title="População em idade de trabalhar (1 000 pessoas)")
+        df = pd.read_json("dados/dados_dash.populacao_em_idade_de_trabalhar.json")
+        fig1 = px.bar(df, x=df.columns[2], y=df.columns[3], title="População em idade de trabalhar (1 000 pessoas)")
 
         fig1.update_traces(textposition="outside")
         fig1.update_layout(
             xaxis_title="Ano",
-            yaxis_title="Valor",
-            uniformtext_minsize=8,
-            uniformtext_mode='hide'
+            yaxis_title="Valor"
         )
 
-        st.plotly_chart(fig1)
+        st.plotly_chart(fig1, key="gerais1")
 
     with col2:
-        df = pd.read_excel(dados, sheet_name="27 - População na força de trab", header=1)
-        df = df.apply(lambda col: pd.to_numeric(col, errors='coerce'))
-        df = df.astype(int)
-        col_x = df.columns[0] 
-        col_y = df.columns[1] 
-        fig2 = px.bar(df, x=col_x, y=col_y, title="População na força de trabalho (1 000 pessoas)")
+        df = pd.read_json("dados/dados_dash.populacao_na_forca_de_trabalho.json")   
+        fig2 = px.bar(df, x=df.columns[2], y=df.columns[3], title="População na força de trabalho (1 000 pessoas)")
 
         fig2.update_traces(textposition="outside")
         fig2.update_layout(
             xaxis_title="Ano",
-            yaxis_title="Valor",
-            uniformtext_minsize=8,
-            uniformtext_mode='hide'
+            yaxis_title="Valor"
         )
 
-        st.plotly_chart(fig2)    
+        st.plotly_chart(fig2, key="gerais2")    
     with col3:
-        df = pd.read_excel(dados, sheet_name="31 - População na força de trab", header=1)
-        df = df.apply(lambda col: pd.to_numeric(col, errors='coerce'))
-        df = df.astype(int)
-        col_x = df.columns[0] 
-        col_y = df.columns[1] 
-        fig3 = px.line(df, x=col_x, y=col_y, title="População na força de trabalho potencial (1 000 pessoas)")
+        df = pd.read_json("dados/dados_dash.populacao_na_forca_de_trabalho_potencial.json")
+        fig3 = px.line(df, x=df.columns[2], y=df.columns[3], title="População na força de trabalho potencial (1 000 pessoas)")
 
         fig3.update_layout(
             xaxis_title="Ano",
-            yaxis_title="Valor",
-            uniformtext_minsize=8,
-            uniformtext_mode='hide',
+            yaxis_title="Valor"
         )
-        max_val = df[col_y].max()
+        max_val = df[df.columns[3]].max()
         fig3.update_yaxes(range=[0, max_val * 1.1]) 
-        st.plotly_chart(fig3)   
+        st.plotly_chart(fig3, key="gerais3")   
     
 elif st.session_state.page == "Trabalhando":
     st.subheader("Trabalhando")
     col1, col2, col3 = st.columns(3)
     with col1:
-        df = pd.read_excel(dados, sheet_name="17 - Pessoas trabalhando ", header=1)
-        df = df.apply(lambda col: pd.to_numeric(col, errors='coerce'))
-        df = df.astype(int)
-        col_x = df.columns[0] 
-        col_y = df.columns[1] 
-        fig4 = px.line(df, x=col_x, y=col_y, title="Pessoas trabalhando (1 000 pessoas)")
+        df = pd.read_json("dados/dados_dash.pessoas_trabalhando.json")
+        fig4 = px.line(df, x=df.columns[2], y=df.columns[3], title="Pessoas trabalhando (1 000 pessoas)")
 
         fig4.update_layout(
             xaxis_title="Ano",
-            yaxis_title="Valor",
-            uniformtext_minsize=8,
-            uniformtext_mode='hide',
+            yaxis_title="Valor"
         )
-        max_val = df[col_y].max()
+        max_val = df[df.columns[3]].max()
         fig4.update_yaxes(range=[0, max_val * 1.1]) 
-        st.plotly_chart(fig4)   
+        st.plotly_chart(fig4, key="trabalhando1")   
 
+        #idade
+        df = pd.read_json("dados/dados_dash.pessoas_trabalhando_por_grupos_de_idade.json")
+
+        df_long = pd.melt(df, id_vars=["Ano"], 
+                  value_vars=["14 a 29 anos", "30 a 49 anos", "50 a 59 anos","60 anos ou mais"],
+                  var_name="Grupos de idade", 
+                  value_name="Valor")
+        
+        fig7 = px.bar(df_long, 
+             x="Valor", 
+             y="Ano", 
+             color="Grupos de idade", 
+             orientation='h',
+             barmode="stack", 
+             labels={"Valor": "Valor", "Ano": "Ano", "Grupos de idade": "Grupos de idade"},
+             title="Pessoas trabalhando por grupos de idade (%)")
+        
+        fig7.update_xaxes(range=[0, 100]) 
+        st.plotly_chart(fig7, key="trabalhando2") 
+    
     with col2:
-        st.write("col2")
+        df = pd.read_json("dados/dados_dash.pessoas_trabalhando_desagregado_por_sexo.json")
+        
+        df_long = pd.melt(df, id_vars=["Ano"], 
+                  value_vars=["Homens", "Mulheres"],
+                  var_name="Sexo", 
+                  value_name="Valor")
+        
+        fig5 = px.bar(df_long, 
+             x="Valor", 
+             y="Ano", 
+             color="Sexo", 
+             orientation='h',
+             barmode="stack", 
+             labels={"Valor": "Valor", "Ano": "Ano", "Sexo": "Sexo"},
+             title="Pessoas trabalhando desagregado por sexo (%)")
+
+        
+        fig5.update_layout(legend=dict(
+        orientation="h",
+        yanchor="bottom",
+        y=1.0,
+        xanchor="center",
+        x=0.5
+        ))
+        
+        fig5.update_xaxes(range=[0, 100]) 
+        st.plotly_chart(fig5, key="trabalhando3")
+
+        #sexo E cor ou raça
+        df = pd.read_json("dados/dados_dash.pessoas_trabalhando_por_sexo_e_cor_ou_raca.json")
+
+        df_long = pd.melt(df, id_vars=["Ano"], 
+                  value_vars=["Homem branco", "Homem preto ou pardo", "Mulher branca", "Mulher preta ou parda"],
+                  var_name="Sexo e cor/raça", 
+                  value_name="Valor")
+        
+        fig8 = px.bar(df_long, 
+             x="Valor", 
+             y="Ano", 
+             color="Sexo e cor/raça", 
+             orientation='h',
+             barmode="stack", 
+             labels={"Valor": "Valor", "Ano": "Ano", "Sexo e cor/raça": "Sexo e cor/raça"},
+             title="Pessoas trabalhando por sexo e cor ou raça (%)")
+
+        fig8.update_xaxes(range=[0, 100]) 
+        st.plotly_chart(fig8, key="trabalhando4")
+        
     with col3:
-        st.write("col2")
- 
+        df = pd.read_json("dados/dados_dash.pessoas_trabalhando_desagregado_por_cor_ou_raca.json")
+        
+        df_long = pd.melt(df, id_vars=["Ano"], 
+                  value_vars=["Branca", "Preta", "Parda"],
+                  var_name="Cor ou Raça", 
+                  value_name="Valor")
+        
+        fig6 = px.bar(df_long, 
+             x="Valor", 
+             y="Ano", 
+             color="Cor ou Raça", 
+             orientation='h',
+             barmode="stack", 
+             labels={"Valor": "Valor", "Ano": "Ano", "Cor ou Raça": "Cor ou Raça"},
+             title="Pessoas trabalhando desagregado por cor ou raça (%)")
+
+        
+        fig6.update_layout(legend=dict(
+        orientation="h",
+        yanchor="bottom",
+        y=1.0,
+        xanchor="center",
+        x=0.5
+        ))
+        
+        fig6.update_xaxes(range=[0, 100]) 
+        st.plotly_chart(fig6, key="trabalhando5") 
+
+        #nível de instrução
+        df = pd.read_json("dados/dados_dash.pessoas_trabalhando_de_acordo_com_nivel_de_instrucao.json")
+    
+        df_long = pd.melt(df, id_vars=["Ano"], 
+                  value_vars=[
+                      "Sem instrução ou fundamental incompleto", 
+                      "Ensino fundamental completo ou médio incompleto", 
+                      "Ensino médio completo ou superior incompleto", 
+                      "Ensino superior completo"
+                      ],
+                  var_name="Nível de instrução", 
+                  value_name="Valor")
+        
+        fig9 = px.bar(df_long, 
+             x="Ano", 
+             y="Valor", 
+             color="Nível de instrução", 
+             barmode="stack",
+             labels={"Valor": "Valor", "Ano": "Ano", "Nível de instrução": "Nível de instrução"},
+             title="Pessoas trabalhando de acordo com o nível de instrução (%)")  
+        
+        fig9.update_yaxes(range=[0, 100]) 
+        st.plotly_chart(fig9, key="trabalhando6")
+        
+    col4, col5 = st.columns(2)
+    with col4:
+        # pessoas ocupadas de acordo com carga horária de trabalho %
+        df = pd.read_json("dados/dados_dash.percentuais_das_pessoas_ocupadas_de_acordo_com_carga_horaria_de_trabalho.json")
+        
+        df_long = pd.melt(df, id_vars=["Ano"],
+                    value_vars=[
+                        "Até 14 horas",
+                        "De 15 a 30 horas",
+                        "De 31 a 39 horas", 
+                        "De 40 a 44 horas",
+                        "De 45 a 48 horas",
+                        "49 horas ou mais"
+                    ],
+                    var_name="Carga Horária",
+                    value_name="Valor")
+        
+        fig10 = px.line(df_long,
+                x="Ano",
+                y="Valor",
+                color="Carga Horária",
+                labels={"Valor": "Valor", "Ano": "Ano", "Carga Horária": "Carga Horária"},
+                title="Pessoas trabalhando de acordo com carga de horária de trabalho (%)")
+        
+        fig10.update_yaxes(range=[0, df_long["Valor"].max() * 1.5])
+        st.plotly_chart(fig10, key="trabalhando7")
+        
+    with col5:
+        # pessoas ocupadas de acordo com a posição na ocupação %
+        df = pd.read_json("dados/dados_dash.distribuicao_das_pessoas_ocupadas_de_acordo_com_posicao_na_ocupacao.json")
+        
+        df_long = pd.melt(df, id_vars=["Ano"],
+                    value_vars=[
+                        "Empregado (CTPS)",
+                        "Empregado (informal)",
+                        "Trabalhador doméstico (CTPS)",
+                        "Trabalhador doméstico (informal)",
+                        "Militar ou funcionário público estatutário",
+                        "Conta própria",
+                        "Empregador"
+                    ],
+                    var_name="Posição Ocupada",
+                    value_name="Valor")
+        
+        fig11 = px.line(df_long,
+                x="Ano",
+                y="Valor",
+                color="Posição Ocupada",
+                labels={"Valor": "Valor", "Ano": "Ano", "Posição Ocupada": "Posição Ocupada"},
+                title="Pessoas trabalhando de acordo com posição ocupada (%)")
+        
+        fig11.update_yaxes(range=[0, df_long["Valor"].max() * 1.5])
+        st.plotly_chart(fig11, key="trabalhando8")
+    
+    col6, col7, col8 = st.columns(3)
+    with col6:
+        # população trabalhando em trabalhos formais
+        df = pd.read_json("dados/dados_dash.populacao_trabalhando_em_trabalhos_formais.json")
+        fig12 = px.bar(df, x=df.columns[2], y=df.columns[3], title="População trabalhando em trabalhos formais (1 000 pessoas)")
+
+        fig12.update_traces(textposition="outside")
+        fig12.update_layout(
+            xaxis_title="Ano",
+            yaxis_title="Valor"
+        )
+
+        st.plotly_chart(fig12)
+    with col7:
+        #ocupadas em trabalhos formais por gênero (%)
+        df = pd.read_json("dados/dados_dash.proporcao_em_trabalhos_formais_por_genero.json")
+        
+        df_long = pd.melt(df, id_vars=["Ano"], 
+                  value_vars=["Homens", "Mulheres"],
+                  var_name="Sexo", 
+                  value_name="Valor")
+        
+        fig13 = px.bar(df_long, 
+             x="Ano", 
+             y="Valor", 
+             color="Sexo", 
+             barmode="group", 
+             labels={"Valor": "Valor", "Ano": "Ano", "Sexo": "Sexo"},
+             title="Pessoas trabalhando em trabalhos formais de acordo com gênero (%)")
+        
+        fig13.update_layout(legend=dict(
+        orientation="h",
+        yanchor="bottom",
+        y=1.0,
+        xanchor="right",
+        x=0.6
+        ))
+        
+        fig13.update_yaxes(range=[0, df_long["Valor"].max() * 1.1]) 
+        st.plotly_chart(fig13, key="trabalhando9")
+        
+    with col8:
+        #ocupadas em trabalhos formais por cor ou raça (%)
+        df = pd.read_json("dados/dados_dash.pessoas_em_trabalhos_formais_por_cor_ou_raca.json")
+        
+        df_long = pd.melt(df, id_vars=["Ano"], 
+                  value_vars=["Branca", "Preta", "Parda"],
+                  var_name="Cor ou raça", 
+                  value_name="Valor")
+        
+        fig14 = px.bar(df_long, 
+             x="Ano", 
+             y="Valor", 
+             color="Cor ou raça", 
+             barmode="group", 
+             labels={"Valor": "Valor", "Ano": "Ano", "Cor ou raça": "Cor ou raça"},
+             title="Pessoas trabalhando em trabalhos formais de acordo com cor ou raça (%)")
+        
+        fig14.update_layout(legend=dict(
+        orientation="h",
+        yanchor="bottom",
+        y=1.0,
+        xanchor="right",
+        x=0.8
+        ))
+        
+        fig14.update_yaxes(range=[0, df_long["Valor"].max() * 1.2]) 
+        st.plotly_chart(fig14, key="trabalhando10")
 
 elif st.session_state.page == "Rendimentos":
-    st.write(st.session_state.page)
+    st.subheader("Rendimento")
+    col1, col2 = st.columns(2)
+    with col1:
+        # rendimento médio por hora de acordo com nível de instrução 
+        df = pd.read_json("dados/dados_dash.rendimento_medio_hora_de_acordo_com_nivel_de_instrucao.json")
+        
+        df_long = pd.melt(df, id_vars=["Ano"], 
+                  value_vars=[
+                    "Sem instrução ou fundamental incompleto",
+                    "Ensino fundamental completo ou médio incompleto",
+                    "Ensino médio completo ou superior incompleto",
+                    "Ensino superior completo"
+                    ],
+                  var_name="Nível de Instrução", 
+                  value_name="Valor")
+        
+        fig15 = px.bar(df_long, 
+             x="Ano", 
+             y="Valor", 
+             color="Nível de Instrução", 
+             barmode="group", 
+             labels={"Valor": "Valor", "Ano": "Ano", "Nível de Instrução": "Nível de Instrução"},
+             title="Rendimento médio por hora de acordo com o nível de instrução (R$)")
+        
+        fig15.update_layout(legend=dict(
+        orientation="h",
+        yanchor="bottom",
+        y=0.9,
+        xanchor="right",
+        x=0.8
+        ))
+        
+        fig15.update_yaxes(range=[0, df_long["Valor"].max() * 1.2])
+        st.plotly_chart(fig15, key="rendimentos1")
+        
+        # rendimento médio por hora de todos os trabalhadores 
+        df = pd.read_json("dados/dados_dash.rendimento_medio_hora_de_todos_os_trabalhadores.json")
+        
+        df_long = pd.melt(df, id_vars=["Ano"], 
+                  value_vars=[
+                    "Rendimento-hora médio real habitual do trabalho principal (R$/hora)",
+                    "Rendimento-hora médio real habitual de todos os trabalhos (R$/hora)"
+                    ],
+                  var_name="Tipo", 
+                  value_name="Valor")
+        
+        fig17 = px.bar(df_long, 
+             x="Ano", 
+             y="Valor", 
+             color="Tipo", 
+             barmode="group", 
+             labels={"Valor": "Valor", "Ano": "Ano", "Tipo": ""},
+             title="Rendimento médio por hora de todos os trabalhadores  (R$)")
+        
+        fig17.update_layout(legend=dict(
+        orientation="h",
+        yanchor="bottom",
+        y=0.9,
+        xanchor="right",
+        x=0.55
+        ))
+        
+        fig17.update_yaxes(range=[0, df_long["Valor"].max() * 1.2])
+        st.plotly_chart(fig17, key="rendimentos2")
+        
+    with col2:
+        # rendimento medio mensal de acordo com a posição na ocupação R$
+        df = pd.read_json("dados/dados_dash.rendimento_medio_mensal_de_acordo_com_posicao_ocupada.json")
+        
+        df_long = pd.melt(df, id_vars=["Ano"],
+                    value_vars=[
+                        "Empregado (CTPS)",
+                        "Empregado (sem CTPS)",
+                        "Trabalhador doméstico (CTPS)",
+                        "Trabalhador doméstico (sem CTPS)",
+                        "Militar ou funcionário público estatutário",
+                        "Conta própria",
+                        "Empregador"
+                    ],
+                    var_name="Posição Ocupada",
+                    value_name="Valor")
+        
+        fig16 = px.line(df_long,
+                x="Ano",
+                y="Valor",
+                color="Posição Ocupada",
+                labels={"Valor": "Valor", "Ano": "Ano", "Posição Ocupada": "Posição Ocupada"},
+                title="Rendimento médio mensal de acordo com posição ocupada (R$)")
+        
+        fig16.update_yaxes(range=[0, df_long["Valor"].max() * 1.2])
+        st.plotly_chart(fig16, key="rendimentos3")
+
+        # rendimento medio mensal de todos os trabalhadores R$
+        df = pd.read_json("dados/dados_dash.rendimento_medio_mensal_de_todos_os_trabalhadores.json")
+        
+        df_long = pd.melt(df, id_vars=["Ano"],
+                    value_vars=[
+                    "Rendimento médio real habitual do trabalho principal (R$/mês)",
+                    "Rendimento médio real habitual de todos os trabalhos (R$/mês)"
+                    ],
+                    var_name="Tipo",
+                    value_name="Valor")
+        
+        fig18 = px.line(df_long,
+                x="Ano",
+                y="Valor",
+                color="Tipo",
+                labels={"Valor": "Valor", "Ano": "Ano", "Tipo": ""},
+                title="Rendimento médio mensal de todos os trabalhadores (R$)")
+        
+        fig18.update_yaxes(range=[0, df_long["Valor"].max() * 1.2])
+        st.plotly_chart(fig18, key="rendimentos4")
+        
 elif st.session_state.page == "Jovens":
-    st.write(st.session_state.page)
+    st.subheader("Jovens")
+
+    #distribuição dos jovens de acordo com seu status de ocupação (1 000 pessoas)
+    df = pd.read_json("dados/dados_dash.distribuicao_de_jovens_de_acordo_com_status_de_ocupacao.json")
+        
+    df_long = pd.melt(df, id_vars=["Ano"],
+                value_vars=[
+                "Só estuda",
+                "Estuda e está trabalhando", 
+                "Só está trabalhando",
+                "Não estuda e não está trabalhando"
+                ],
+                var_name="Status",
+                value_name="Valor")
+        
+    fig19 = px.line(df_long,
+            x="Ano",
+            y="Valor",
+            color="Status",
+            labels={"Valor": "Valor", "Ano": "Ano", "Status": "Status"},
+            title="Distribuição dos jovens de acordo com seu status de ocupação (1 000 pessoas)")
+        
+    fig19.update_yaxes(range=[0, df_long["Valor"].max() * 1.2])
+    st.plotly_chart(fig19, key="jovens1")
+   
+    #jovens de 15 a 29 anos de acordo com situação de ocupação e condição de estudo
+    df = pd.read_json("dados/dados_dash.grupos_de_jovens_por_situacao_de_ocupacao_e_estudo.json")
+    
+    df_long = pd.melt(df, id_vars=["Ano", "Faixa etária"],
+                value_vars=[
+                    "Só estuda",
+                    "Estuda e está trabalhando",
+                    "Só está trabalhando",
+                    "Não estuda e não está trabalhando"
+                ],
+                var_name="Status",
+                value_name="Valor")
+    
+    fig20 = px.bar(df_long, 
+             x="Ano", 
+             y="Valor", 
+             color="Status", 
+             barmode="stack",
+             facet_col="Faixa etária",
+             labels={"Valor": "Valor", "Ano": "Ano", "Faixa etária": "Faixa etária"},
+             title="Jovens de 15 a 29 anos de acordo com a situação de ocupação e condição de estudo (%)")
+    
+    fig20.update_yaxes(range=[0, 100])
+    st.plotly_chart(fig20, key="jovens2")
+
 elif st.session_state.page == "Desocupados":
-    st.write(st.session_state.page)
+    st.subheader("Desocupados")
+    
+    col1, col2 = st.columns(2)
+    with col1:
+        #população desocupada
+        df = pd.read_json("dados/dados_dash.populacao_desocupada.json")
+        fig21 = px.line(df, x=df.columns[2], y=df.columns[3], title="População desocupada (1 000 pessoas)")
+
+        fig21.update_layout(
+            xaxis_title="Ano",
+            yaxis_title="Valor"
+        )
+        fig21.update_yaxes(range=[0, df["Valor"].max() * 1.2]) 
+        st.plotly_chart(fig21, key="desocupados1")  
+        
+        #taxa de desocupação por cor ou raça
+        df = pd.read_json("dados/dados_dash.taxa_desocupacao_desgregada_por_cor_ou_raca.json")
+        
+        df_long = pd.melt(df, id_vars=["Ano"], 
+                  value_vars=["Branca", "Preta ou Parda"],
+                  var_name="Cor ou raça", 
+                  value_name="Valor")
+        
+        fig22 = px.line(df_long, 
+             x="Ano", 
+             y="Valor", 
+             color="Cor ou raça", 
+             labels={"Valor": "Valor", "Ano": "Ano", "Cor ou raça": "Cor ou raça"},
+             title="Taxa de desocupação por cor ou raça (%)")
+
+        fig22.update_layout(legend=dict(
+        orientation="h",
+        yanchor="bottom",
+        y=1.0,
+        xanchor="center",
+        x=0.5
+        ))
+        
+        fig22.update_yaxes(range=[0, df_long["Valor"].max() * 1.2]) 
+        st.plotly_chart(fig22, key="desocupados2")
+    with col2:
+        #taxa de desocupação por sexo 
+        df = pd.read_json("dados/dados_dash.taxa_desocupacao_desgregada_por_sexo.json")
+        
+        df_long = pd.melt(df, id_vars=["Ano"], 
+                  value_vars=["Homens", "Mulheres"],
+                  var_name="Sexo", 
+                  value_name="Valor")
+        
+        fig23 = px.line(df_long, 
+             x="Ano", 
+             y="Valor", 
+             color="Sexo", 
+             labels={"Valor": "Valor", "Ano": "Ano", "Sexo": "Sexo"},
+             title="Taxa de desocupação por sexo (%)")
+
+        
+        fig23.update_layout(legend=dict(
+        orientation="h",
+        yanchor="bottom",
+        y=1.0,
+        xanchor="center",
+        x=0.5
+        ))
+        
+        fig23.update_yaxes(range=[0, df_long["Valor"].max() * 1.2]) 
+        st.plotly_chart(fig23, key="desocupados3")
+        
+        #taxa de desocupação por grupos de idade
+        df = pd.read_json("dados/dados_dash.taxa_desocupacao_desgregada_por_grupos_de_idade.json")
+        
+        df_long = pd.melt(df, id_vars=["Ano"], 
+                  value_vars=[
+                      "14 a 29 anos",
+                      "30 a 49 anos",
+                      "50 anos ou mais"],
+                  var_name="Grupos de Idade", 
+                  value_name="Valor")
+        
+        fig24 = px.line(df_long, 
+             x="Ano", 
+             y="Valor", 
+             color="Grupos de Idade", 
+             labels={"Valor": "Valor", "Ano": "Ano", "Grupos de Idade": "Grupos de Idade"},
+             title="Taxa de desocupação por grupos de idade (%)")
+
+        
+        fig24.update_layout(legend=dict(
+        orientation="h",
+        yanchor="bottom",
+        y=1.0,
+        xanchor="center",
+        x=0.5
+        ))
+        
+        fig24.update_yaxes(range=[0, df_long["Valor"].max() * 1.2]) 
+        st.plotly_chart(fig24, key="desocupados4")
+    
+    # pessoas desocupadas e procurando emprego agrupadas por tempo (%)        
+    df = pd.read_json("dados/dados_dash.pessoas_desocupadas_procurando_trabalho_agrupadas_por_tempo.json")
+    
+    df_long = pd.melt(df, id_vars=["Ano"], 
+                value_vars=[
+                     "Até um mês", 
+                     "Mais de um mês a menos de um ano",
+                     "De um ano a menos de dois anos",
+                     "Dois anos ou mais"
+                      ],
+                var_name="Tempo", 
+                value_name="Valor")
+        
+    fig25 = px.bar(df_long, 
+            x="Ano", 
+            y="Valor", 
+            color="Tempo", 
+            barmode="stack",
+            labels={"Valor": "Valor", "Ano": "Ano", "Tempo": "Tempo"},
+            title="Pessoas desocupadas e procurando emprego agrupadas por tempo (%)")  
+        
+    fig25.update_yaxes(range=[0, 100]) 
+    st.plotly_chart(fig25, key="desocupados5")
+
 elif st.session_state.page == "Subutilização":
-    st.write(st.session_state.page)
+    st.subheader("Subutilizados")
+    col1, col2 = st.columns(2)
+    
+    with col1:
+       
+        #população subutilizada 1 000
+        df = pd.read_json("dados/dados_dash.populacao_subutilizada.json")
+        fig26 = px.line(df, x=df.columns[2], y=df.columns[3], title="População subutilizada (1 000 pessoas)")
+
+        fig26.update_layout(
+            xaxis_title="Ano",
+            yaxis_title="Valor"
+        )
+        fig26.update_yaxes(range=[0, df["Valor"].max() * 1.2]) 
+        st.plotly_chart(fig26, key="subutilizados1")
+        
+        #subutilização da força de trabalho desagregado por sexo %
+        df = pd.read_json("dados/dados_dash.subutilizacao_forca_trabalho_desagrupada_por_sexo.json")
+        
+        df_long = pd.melt(df, id_vars=["Ano"], 
+                  value_vars=["Homens", "Mulheres"],
+                  var_name="Sexo", 
+                  value_name="Valor")
+        
+        fig27 = px.line(df_long, 
+             x="Ano", 
+             y="Valor", 
+             color="Sexo", 
+             labels={"Valor": "Valor", "Ano": "Ano", "Sexo": "Sexo"},
+             title="Subutilização da força de trabalho desagregada por sexo (%)")
+
+        
+        fig27.update_layout(legend=dict(
+        orientation="h",
+        yanchor="bottom",
+        y=1.0,
+        xanchor="center",
+        x=0.5
+        ))
+        
+        fig27.update_yaxes(range=[0, df_long["Valor"].max() * 1.2])
+        st.plotly_chart(fig27, key="subutilizados2")
+        
+        #subutilização da força de trabalho desagregado por grupos de idade %
+        df = pd.read_json("dados/dados_dash.subutilizacao_forca_trabalho_desagrupada_por_grupos_de_idade.json")
+        
+        df_long = pd.melt(df, id_vars=["Ano"], 
+                  value_vars=[
+                      "14 a 29 anos",
+                      "30 a 49 anos",
+                      "50 anos ou mais"],
+                  var_name="Grupos de Idade", 
+                  value_name="Valor")
+        
+        fig28 = px.line(df_long, 
+             x="Ano", 
+             y="Valor", 
+             color="Grupos de Idade", 
+             labels={"Valor": "Valor", "Ano": "Ano", "Grupos de Idade": "Grupos de Idade"},
+             title="Subutilização da força de trabalho desagregada por grupos de idade (%)")
+
+        
+        fig28.update_layout(legend=dict(
+        orientation="h",
+        yanchor="bottom",
+        y=1.0,
+        xanchor="center",
+        x=0.5
+        ))
+        
+        fig28.update_yaxes(range=[0, df_long["Valor"].max() * 1.2]) 
+        st.plotly_chart(fig28, key="subutilizados3")
+    with col2:
+        
+        #subutilização da força de trabalho ao longo dos anos %
+        df = pd.read_json("dados/dados_dash.porcentagem_subutilizacao_da_forca_de_trabalho.json")
+        fig29 = px.line(df, x=df.columns[2], y=df.columns[3], title="Subutilização da força de trabalho ao longo dos anos (%)")
+
+        fig29.update_layout(
+            xaxis_title="Ano",
+            yaxis_title="Valor"
+        )
+        fig29.update_yaxes(range=[0, df["Valor"].max() * 1.2]) 
+        st.plotly_chart(fig29, key="subutilizados")
+        
+        #subutilização da força de trabalho desagregado por cor ou raça %
+        df = pd.read_json("dados/dados_dash.subutilizacao_forca_trabalho_desagrupada_por_grupos_de_idade.json")
+        
+        df_long = pd.melt(df, id_vars=["Ano"], 
+                  value_vars=[
+                      "14 a 29 anos",
+                      "30 a 49 anos",
+                      "50 anos ou mais"],
+                  var_name="Grupos de Idade", 
+                  value_name="Valor")
+        
+        fig30 = px.line(df_long, 
+             x="Ano", 
+             y="Valor", 
+             color="Grupos de Idade", 
+             labels={"Valor": "Valor", "Ano": "Ano", "Grupos de Idade": "Grupos de Idade"},
+             title="Subutilização da força de trabalho desagregada por grupos de idade (%)")
+
+        
+        fig30.update_layout(legend=dict(
+        orientation="h",
+        yanchor="bottom",
+        y=1.0,
+        xanchor="center",
+        x=0.5
+        ))
+        
+        fig30.update_yaxes(range=[0, df_long["Valor"].max() * 1.2]) 
+        st.plotly_chart(fig30, key="subutilizados5")

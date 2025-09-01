@@ -1,0 +1,80 @@
+[
+  {
+    "_id": {
+      "$oid": "68abab723c728c5990bd7d83"
+    },
+    "Estado": "RN",
+    "Ano": 2018,
+    "Até 14 horas": 6.5,
+    "De 15 a 30 horas": 22.6,
+    "De 31 a 39 horas": 5.2,
+    "De 40 a 44 horas": 44.7,
+    "De 45 a 48 horas": 10.1,
+    "49 horas ou mais": 11.0
+  },
+  {
+    "_id": {
+      "$oid": "68abab723c728c5990bd7d84"
+    },
+    "Estado": "RN",
+    "Ano": 2019,
+    "Até 14 horas": 6.6,
+    "De 15 a 30 horas": 20.2,
+    "De 31 a 39 horas": 4.8,
+    "De 40 a 44 horas": 46.0,
+    "De 45 a 48 horas": 10.0,
+    "49 horas ou mais": 12.4
+  },
+  {
+    "_id": {
+      "$oid": "68abab723c728c5990bd7d85"
+    },
+    "Estado": "RN",
+    "Ano": 2020,
+    "Até 14 horas": 4.2,
+    "De 15 a 30 horas": 23.8,
+    "De 31 a 39 horas": 5.1,
+    "De 40 a 44 horas": 50.2,
+    "De 45 a 48 horas": 7.4,
+    "49 horas ou mais": 9.3
+  },
+  {
+    "_id": {
+      "$oid": "68abab723c728c5990bd7d86"
+    },
+    "Estado": "RN",
+    "Ano": 2021,
+    "Até 14 horas": 5.0,
+    "De 15 a 30 horas": 23.9,
+    "De 31 a 39 horas": 5.0,
+    "De 40 a 44 horas": 48.0,
+    "De 45 a 48 horas": 9.4,
+    "49 horas ou mais": 8.7
+  },
+  {
+    "_id": {
+      "$oid": "68abab723c728c5990bd7d87"
+    },
+    "Estado": "RN",
+    "Ano": 2022,
+    "Até 14 horas": 4.2,
+    "De 15 a 30 horas": 21.8,
+    "De 31 a 39 horas": 4.1,
+    "De 40 a 44 horas": 50.0,
+    "De 45 a 48 horas": 10.1,
+    "49 horas ou mais": 9.9
+  },
+  {
+    "_id": {
+      "$oid": "68abab723c728c5990bd7d88"
+    },
+    "Estado": "RN",
+    "Ano": 2023,
+    "Até 14 horas": 3.9,
+    "De 15 a 30 horas": 21.3,
+    "De 31 a 39 horas": 4.8,
+    "De 40 a 44 horas": 52.1,
+    "De 45 a 48 horas": 8.3,
+    "49 horas ou mais": 9.6
+  }
+]

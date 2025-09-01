@@ -1,0 +1,86 @@
+[
+  {
+    "_id": {
+      "$oid": "68abaea23c728c5990bd7dad"
+    },
+    "Estado": "RN",
+    "Ano": 2018,
+    "Empregado (CTPS)": 2157,
+    "Empregado (sem CTPS)": 1398,
+    "Trabalhador doméstico (CTPS)": 1346,
+    "Trabalhador doméstico (sem CTPS)": 682,
+    "Militar ou funcionário público estatutário": 5146,
+    "Conta própria": 1303,
+    "Empregador": 3954
+  },
+  {
+    "_id": {
+      "$oid": "68abaea23c728c5990bd7dae"
+    },
+    "Estado": "RN",
+    "Ano": 2019,
+    "Empregado (CTPS)": 2068,
+    "Empregado (sem CTPS)": 1214,
+    "Trabalhador doméstico (CTPS)": 1337,
+    "Trabalhador doméstico (sem CTPS)": 706,
+    "Militar ou funcionário público estatutário": 5149,
+    "Conta própria": 1465,
+    "Empregador": 5067
+  },
+  {
+    "_id": {
+      "$oid": "68abaea23c728c5990bd7daf"
+    },
+    "Estado": "RN",
+    "Ano": 2020,
+    "Empregado (CTPS)": 2410,
+    "Empregado (sem CTPS)": 1270,
+    "Trabalhador doméstico (CTPS)": 1479,
+    "Trabalhador doméstico (sem CTPS)": 663,
+    "Militar ou funcionário público estatutário": 5059,
+    "Conta própria": 1504,
+    "Empregador": 4816
+  },
+  {
+    "_id": {
+      "$oid": "68abaea23c728c5990bd7db0"
+    },
+    "Estado": "RN",
+    "Ano": 2021,
+    "Empregado (CTPS)": 2017,
+    "Empregado (sem CTPS)": 1158,
+    "Trabalhador doméstico (CTPS)": 1296,
+    "Trabalhador doméstico (sem CTPS)": 601,
+    "Militar ou funcionário público estatutário": 6076,
+    "Conta própria": 1455,
+    "Empregador": 4633
+  },
+  {
+    "_id": {
+      "$oid": "68abaea23c728c5990bd7db1"
+    },
+    "Estado": "RN",
+    "Ano": 2022,
+    "Empregado (CTPS)": 1764,
+    "Empregado (sem CTPS)": 1360,
+    "Trabalhador doméstico (CTPS)": 1423,
+    "Trabalhador doméstico (sem CTPS)": 662,
+    "Militar ou funcionário público estatutário": 4710,
+    "Conta própria": 1584,
+    "Empregador": 7179
+  },
+  {
+    "_id": {
+      "$oid": "68abaea23c728c5990bd7db2"
+    },
+    "Estado": "RN",
+    "Ano": 2023,
+    "Empregado (CTPS)": 1971,
+    "Empregado (sem CTPS)": 1388,
+    "Trabalhador doméstico (CTPS)": 1378,
+    "Trabalhador doméstico (sem CTPS)": 629,
+    "Militar ou funcionário público estatutário": 5343,
+    "Conta própria": 1776,
+    "Empregador": 5559
+  }
+]

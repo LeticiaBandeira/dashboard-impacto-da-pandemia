@@ -1,0 +1,68 @@
+[
+  {
+    "_id": {
+      "$oid": "68aba7893c728c5990bd7d54"
+    },
+    "Estado": "RN",
+    "Ano": 2018,
+    "Homem branco": 18.7,
+    "Homem preto ou pardo": 39.0,
+    "Mulher branca": 17.5,
+    "Mulher preta ou parda": 24.7
+  },
+  {
+    "_id": {
+      "$oid": "68aba7893c728c5990bd7d55"
+    },
+    "Estado": "RN",
+    "Ano": 2019,
+    "Homem branco": 19.9,
+    "Homem preto ou pardo": 39.1,
+    "Mulher branca": 17.3,
+    "Mulher preta ou parda": 23.4
+  },
+  {
+    "_id": {
+      "$oid": "68aba7893c728c5990bd7d56"
+    },
+    "Estado": "RN",
+    "Ano": 2020,
+    "Homem branco": 20.5,
+    "Homem preto ou pardo": 39.8,
+    "Mulher branca": 16.5,
+    "Mulher preta ou parda": 23.1
+  },
+  {
+    "_id": {
+      "$oid": "68aba7893c728c5990bd7d57"
+    },
+    "Estado": "RN",
+    "Ano": 2021,
+    "Homem branco": 24.6,
+    "Homem preto ou pardo": 37.3,
+    "Mulher branca": 15.4,
+    "Mulher preta ou parda": 22.5
+  },
+  {
+    "_id": {
+      "$oid": "68aba7893c728c5990bd7d58"
+    },
+    "Estado": "RN",
+    "Ano": 2022,
+    "Homem branco": 21.4,
+    "Homem preto ou pardo": 37.4,
+    "Mulher branca": 16.9,
+    "Mulher preta ou parda": 23.9
+  },
+  {
+    "_id": {
+      "$oid": "68aba7893c728c5990bd7d59"
+    },
+    "Estado": "RN",
+    "Ano": 2023,
+    "Homem branco": 20.6,
+    "Homem preto ou pardo": 38.2,
+    "Mulher branca": 16.5,
+    "Mulher preta ou parda": 24.5
+  }
+]

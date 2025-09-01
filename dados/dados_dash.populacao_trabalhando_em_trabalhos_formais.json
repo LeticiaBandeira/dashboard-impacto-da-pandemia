@@ -1,0 +1,48 @@
+[{
+  "_id": {
+    "$oid": "68abac733c728c5990bd7d91"
+  },
+  "Estado": "RN",
+  "Ano": 2018,
+  "Valor": 637
+},
+{
+  "_id": {
+    "$oid": "68abac733c728c5990bd7d92"
+  },
+  "Estado": "RN",
+  "Ano": 2019,
+  "Valor": 676
+},
+{
+  "_id": {
+    "$oid": "68abac733c728c5990bd7d93"
+  },
+  "Estado": "RN",
+  "Ano": 2020,
+  "Valor": 665
+},
+{
+  "_id": {
+    "$oid": "68abac733c728c5990bd7d94"
+  },
+  "Estado": "RN",
+  "Ano": 2021,
+  "Valor": 683
+},
+{
+  "_id": {
+    "$oid": "68abac733c728c5990bd7d95"
+  },
+  "Estado": "RN",
+  "Ano": 2022,
+  "Valor": 784
+},
+{
+  "_id": {
+    "$oid": "68abac733c728c5990bd7d96"
+  },
+  "Estado": "RN",
+  "Ano": 2023,
+  "Valor": 692
+}]

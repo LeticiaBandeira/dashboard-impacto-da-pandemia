@@ -1,0 +1,68 @@
+[
+  {
+    "_id": {
+      "$oid": "68aba73f3c728c5990bd7d4d"
+    },
+    "Estado": "RN",
+    "Ano": 2018,
+    "14 a 29 anos": 26.6,
+    "30 a 49 anos": 52.9,
+    "50 a 59 anos": 15.0,
+    "60 anos ou mais": 5.4
+  },
+  {
+    "_id": {
+      "$oid": "68aba73f3c728c5990bd7d4e"
+    },
+    "Estado": "RN",
+    "Ano": 2019,
+    "14 a 29 anos": 27.1,
+    "30 a 49 anos": 53.0,
+    "50 a 59 anos": 14.9,
+    "60 anos ou mais": 5.0
+  },
+  {
+    "_id": {
+      "$oid": "68aba73f3c728c5990bd7d4f"
+    },
+    "Estado": "RN",
+    "Ano": 2020,
+    "14 a 29 anos": 25.8,
+    "30 a 49 anos": 52.6,
+    "50 a 59 anos": 16.0,
+    "60 anos ou mais": 5.6
+  },
+  {
+    "_id": {
+      "$oid": "68aba73f3c728c5990bd7d50"
+    },
+    "Estado": "RN",
+    "Ano": 2021,
+    "14 a 29 anos": 26.4,
+    "30 a 49 anos": 51.6,
+    "50 a 59 anos": 16.2,
+    "60 anos ou mais": 5.8
+  },
+  {
+    "_id": {
+      "$oid": "68aba73f3c728c5990bd7d51"
+    },
+    "Estado": "RN",
+    "Ano": 2022,
+    "14 a 29 anos": 24.3,
+    "30 a 49 anos": 54.2,
+    "50 a 59 anos": 15.5,
+    "60 anos ou mais": 6.0
+  },
+  {
+    "_id": {
+      "$oid": "68aba73f3c728c5990bd7d52"
+    },
+    "Estado": "RN",
+    "Ano": 2023,
+    "14 a 29 anos": 26.1,
+    "30 a 49 anos": 50.8,
+    "50 a 59 anos": 17.3,
+    "60 anos ou mais": 5.9
+  }
+]

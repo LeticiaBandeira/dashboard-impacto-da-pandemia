@@ -1,0 +1,56 @@
+[
+  {
+    "_id": {
+      "$oid": "68abb7573c728c5990bd7e0d"
+    },
+    "Estado": "RN",
+    "Ano": 2018,
+    "Homens": 32.5,
+    "Mulheres": 40.9
+  },
+  {
+    "_id": {
+      "$oid": "68abb7573c728c5990bd7e0e"
+    },
+    "Estado": "RN",
+    "Ano": 2019,
+    "Homens": 30.5,
+    "Mulheres": 43.9
+  },
+  {
+    "_id": {
+      "$oid": "68abb7573c728c5990bd7e0f"
+    },
+    "Estado": "RN",
+    "Ano": 2020,
+    "Homens": 34.3,
+    "Mulheres": 47.2
+  },
+  {
+    "_id": {
+      "$oid": "68abb7573c728c5990bd7e10"
+    },
+    "Estado": "RN",
+    "Ano": 2021,
+    "Homens": 32.0,
+    "Mulheres": 46.9
+  },
+  {
+    "_id": {
+      "$oid": "68abb7573c728c5990bd7e11"
+    },
+    "Estado": "RN",
+    "Ano": 2022,
+    "Homens": 24.8,
+    "Mulheres": 36.5
+  },
+  {
+    "_id": {
+      "$oid": "68abb7573c728c5990bd7e12"
+    },
+    "Estado": "RN",
+    "Ano": 2023,
+    "Homens": 22.0,
+    "Mulheres": 31.2
+  }
+]

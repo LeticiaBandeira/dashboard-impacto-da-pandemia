@@ -1,0 +1,56 @@
+[
+  {
+    "_id": {
+      "$oid": "68abaf7e3c728c5990bd7db4"
+    },
+    "Estado": "RN",
+    "Ano": 2018,
+    "Rendimento médio real habitual do trabalho principal (R$/mês)": 2126,
+    "Rendimento médio real habitual de todos os trabalhos (R$/mês)": 2235
+  },
+  {
+    "_id": {
+      "$oid": "68abaf7e3c728c5990bd7db5"
+    },
+    "Estado": "RN",
+    "Ano": 2019,
+    "Rendimento médio real habitual do trabalho principal (R$/mês)": 2141,
+    "Rendimento médio real habitual de todos os trabalhos (R$/mês)": 2247
+  },
+  {
+    "_id": {
+      "$oid": "68abaf7e3c728c5990bd7db6"
+    },
+    "Estado": "RN",
+    "Ano": 2020,
+    "Rendimento médio real habitual do trabalho principal (R$/mês)": 2290,
+    "Rendimento médio real habitual de todos os trabalhos (R$/mês)": 2412
+  },
+  {
+    "_id": {
+      "$oid": "68abaf7e3c728c5990bd7db7"
+    },
+    "Estado": "RN",
+    "Ano": 2021,
+    "Rendimento médio real habitual do trabalho principal (R$/mês)": 2333,
+    "Rendimento médio real habitual de todos os trabalhos (R$/mês)": 2486
+  },
+  {
+    "_id": {
+      "$oid": "68abaf7e3c728c5990bd7db8"
+    },
+    "Estado": "RN",
+    "Ano": 2022,
+    "Rendimento médio real habitual do trabalho principal (R$/mês)": 2213,
+    "Rendimento médio real habitual de todos os trabalhos (R$/mês)": 2311
+  },
+  {
+    "_id": {
+      "$oid": "68abaf7e3c728c5990bd7db9"
+    },
+    "Estado": "RN",
+    "Ano": 2023,
+    "Rendimento médio real habitual do trabalho principal (R$/mês)": 2190,
+    "Rendimento médio real habitual de todos os trabalhos (R$/mês)": 2338
+  }
+]

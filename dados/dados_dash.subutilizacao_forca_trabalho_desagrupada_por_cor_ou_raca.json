@@ -1,0 +1,56 @@
+[
+  {
+    "_id": {
+      "$oid": "68abb7903c728c5990bd7e14"
+    },
+    "Estado": "RN",
+    "Ano": 2018,
+    "Branca": 34.1,
+    "Preta ou Parda": 37.4
+  },
+  {
+    "_id": {
+      "$oid": "68abb7903c728c5990bd7e15"
+    },
+    "Estado": "RN",
+    "Ano": 2019,
+    "Branca": 33.0,
+    "Preta ou Parda": 38.4
+  },
+  {
+    "_id": {
+      "$oid": "68abb7903c728c5990bd7e16"
+    },
+    "Estado": "RN",
+    "Ano": 2020,
+    "Branca": 34.8,
+    "Preta ou Parda": 42.7
+  },
+  {
+    "_id": {
+      "$oid": "68abb7903c728c5990bd7e17"
+    },
+    "Estado": "RN",
+    "Ano": 2021,
+    "Branca": 35.4,
+    "Preta ou Parda": 40.2
+  },
+  {
+    "_id": {
+      "$oid": "68abb7903c728c5990bd7e18"
+    },
+    "Estado": "RN",
+    "Ano": 2022,
+    "Branca": 27.2,
+    "Preta ou Parda": 31.6
+  },
+  {
+    "_id": {
+      "$oid": "68abb7903c728c5990bd7e19"
+    },
+    "Estado": "RN",
+    "Ano": 2023,
+    "Branca": 22.8,
+    "Preta ou Parda": 27.8
+  }
+]
